@@ -1,0 +1,365 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="subscribe.css">
+    <script type="text/javascript">
+        function validateForm(){
+           
+            let validName = validateName();
+            let validUser = validateUser();
+            let validPhone = validatePhone();
+            let validPass = validatePass();
+            let validPassConf = validatePassConf();
+            let validEmail = validateEmail();
+            let validDOB = validateDOB();
+            let validAge = validateAge();
+            let validBuild = validateBuild();
+            let validStreet = validateStreet();
+            let validCity = validateCity();
+            let validDiscount = validateDiscount();
+            let validConditions = validateConditions();
+            
+            
+            if (validName && validUser && validPhone && validPass && validPassConf && validEmail && validDOB && validAge && validBuild && validStreet && validCity && validDiscount && validConditions) {
+                return true; 
+            } else {
+                return false;  
+            }
+        }
+
+     
+        function validateName(){
+            let nameElement = document.getElementById('name');
+            let errorElement = document.getElementById('errorMsg');
+            if (nameElement.value == "") {
+                nameElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Full Name";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                nameElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateUser(){
+            let usernameElement = document.getElementById('username');
+            let errorElement = document.getElementById('errorMsg2');
+            if (usernameElement.value == "") {
+                usernameElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Username";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                usernameElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validatePass(){
+            let passElement = document.getElementById('password');
+            let errorElement = document.getElementById('errorMsg3');
+            if (passElement.value == "") {
+                passElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Password";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                passElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validatePassConf(){
+            let confElement = document.getElementById('confirmpassword');
+            let passElement = document.getElementById('password');
+            let errorElement = document.getElementById('errorMsg4');
+            if (confElement.value == "") {
+                confElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Confirm Your Password";
+                errorElement.style.color = "red";
+                return false;
+            } else if (confElement.value != passElement.value) {
+                confElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Passwords do not match";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                confElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateEmail(){
+            let emailElement = document.getElementById('email');
+            let errorElement = document.getElementById('errorMsg5');
+            if (emailElement.value == "") {
+                emailElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Email";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                emailElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validatePhone(){
+            let phoneElement = document.getElementById('phone');
+            let errorElement = document.getElementById('errorMsg6');
+            if (phoneElement.value == "+974") {
+                phoneElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter a Valid Phone Number";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                phoneElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateDOB(){
+            let dobElement = document.getElementById('dob');
+            let errorElement = document.getElementById('errorMsg7');
+            if (dobElement.value == "") {
+                dobElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Date of Birth";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                dobElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateAge(){
+            let ageElement = document.getElementById('age');
+            let errorElement = document.getElementById('errorMsg8');
+            if (ageElement.value == "") {
+                ageElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Age";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                ageElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateBuild(){
+            let buildElement = document.getElementById('build');
+            let errorElement = document.getElementById('errorMsg9');
+            if (buildElement.value == "") {
+                buildElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Building Number";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                buildElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateStreet(){
+            let streetElement = document.getElementById('street');
+            let errorElement = document.getElementById('errorMsg10');
+            if (streetElement.value == "") {
+                streetElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Please Enter Your Street Name";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                streetElement.style.border = "";
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateCity(){
+            let cityElement = document.getElementById('city');
+            let errorElement = document.getElementById('cityErrorMsg');
+            if (cityElement.value == "Doha") {
+                errorElement.innerHTML = "Please Select a City";
+                errorElement.style.color = "red";
+                cityElement.style.border = "2px solid red";
+                return false;
+            } else {
+                errorElement.innerHTML = "";
+                cityElement.style.border = "";
+                return true;
+            }
+        }
+
+        function validateConditions(){
+            let conditionsElement = document.getElementById('conditions');
+            let errorElement = document.getElementById('checkErrorMsg');
+            if (!conditionsElement.checked) {
+                errorElement.innerHTML = "Please Accept Terms and Conditions";
+                errorElement.style.color = "red";
+                return false;
+            } else {
+                errorElement.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateDiscount(){
+            let discountElement = document.getElementById('discount');
+            let errorElement = document.getElementById('errorMsg11');
+            if (discountElement.value == "FRQ9") {
+                discountElement.style.border = "2px solid green";
+                errorElement.innerHTML = "You now Have -20% Off all Your Purchases";
+                errorElement.style.color = "green";
+                return true;
+            } else {
+                discountElement.style.border = "2px solid red";
+                errorElement.innerHTML = "Invalid Discount Code";
+                errorElement.style.color = "red";
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="images/Brown Beige Cute Bakery Logo.png" id="logo" />
+        <nav>
+           <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+           </ul>
+        </nav>
+     </header>
+
+<section>
+    <form action="https://sit.udst.edu.qa/processform.php" onsubmit="return validateForm()" method="post" id="form">
+     <fieldset>
+        <legend>User Details</legend>
+        <div id="first">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" onblur="validateName()" name="Name">
+            <span id="errorMsg"></span>
+        </div>
+        <div id="first">
+            <label for="username">Username</label>
+            <input type="text" id="username" onblur="validateUser()" name="Username">
+            <span id="errorMsg2"></span>
+        </div>
+        <div id="first">
+            <label for="password">Password</label>
+            <input type="password" id="password" onblur="validatePass()" name="Password">
+            <span id="errorMsg3"></span>
+        </div>
+        <div id="first">
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" id="confirmpassword" onblur="validatePassConf()" name="Confirm Password"> 
+            <span id="errorMsg4"></span>
+        </div>
+        <div id="first">
+            <label for="email">Email</label>
+            <input type="email" id="email" onblur="validateEmail()" name="Email">
+            <span id="errorMsg5"></span>
+        </div>
+        <div id="first">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" value="+974" onblur="validatePhone()" name="Phone Number"> 
+            <span id="errorMsg6"></span>
+        </div>
+        <div id="first">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" onblur="validateDOB()" name="DOB">
+            <span id="errorMsg7"></span>
+        </div>
+        <div id="first">
+            <label for="age">Age</label>
+            <input type="number" id="age" onblur="validateAge()" name="Age">
+            <span id="errorMsg8"></span>
+        </div>
+     </fieldset>
+
+     <fieldset>
+        <legend>Shipping Address</legend>
+        <div id="second">
+            <label for="build">Building Number</label>
+            <input type="number" id="build" onblur="validateBuild()" name="Building Number">
+            <span id="errorMsg9"></span>
+        </div>
+        <div id="second">
+            <label for="street">Street Name</label>
+            <input type="text" id="street" onblur="validateStreet()" name="Street Name">
+            <span id="errorMsg10"></span>
+        </div>
+        <div id="second">
+            <label for="city">City Name</label>
+            <select name="city" id="city" onblur="return validateCity()">
+                <option value="Doha">Doha</option>
+                <option value="Al Khor">Al Khor</option>
+                <option value="Al Wakrah">Al Wakrah</option>
+                <option value="Dukhan">Dukhan</option>
+                <option value="Mesaieed">Mesaieed</option>
+                <option value="Umm Salal Muhammed">Umm Salal Muhammed</option>
+                <option value="Lusail">Lusail</option>
+                <option value="Al Rayyan">Al Rayyan</option>
+                <option value="Al Khuwayr">Al Khuwayr</option>
+                <option value="Al Wukair">Al Wukair</option>
+                <option value="Fuwayrit">Fuwayrit</option>
+                <option value="Leabaib">Leabaib</option>
+            </select>
+            <span id="cityErrorMsg"></span>
+        </div>
+        <div id="second">
+            <label for="discount">Discount</label>
+            <input type="text" id="discount" onblur="validateDiscount()" name="Discount" placeholder="FRQ9">
+            <span id="errorMsg11"></span>
+        </div>
+        <div id="second">
+            <label for="conditions">Would you like to subscribe to the newsletter?</label>
+            <input type="checkbox" id="conditions" onclick="validateConditions()" name="Conditions">
+            <span id="checkErrorMsg"></span>
+        </div>
+     </fieldset>
+
+     <div id="buttons">
+        <input type="submit" value="Submit" id="submit">
+    </div>
+</form>
+
+
+     <footer>
+        <div>
+           <h1>ORDER</h1>
+           <a href="products.html">Specials</a> <a href="products.html">Coffee's</a> <a href="products.html">Iced Drinks</a> <a href="products.html">Cookies</a> <a href="products.html">Brownies</a> <a href="products.html">Cakes</a> <a href="products.html">Other Pastries</a>
+        </div>
+        <div>
+           <h1>ABOUT US</h1>
+           <a href="index.html">Company Intro</a> <a href="index.html">Reviews</a> <a href="index.html">Top Sellers</a> <a href="index.html">Discounts</a>
+        </div>
+        <div>   
+           <h1>FORMS</h1>
+           <a href="contact.html">Visit Us</a> <a href="contact.html">Contact Us</a> <a href="contact.html">Location</a>        </div>
+        <address>
+           <h1>VISIT US</h1>
+           <p>Doha Down Town <br />
+           719 Water Map <br />
+           Radio Beach, FL  69010 <br />
+           (000) 313 - 6753</p>
+        </address>
+     </footer>
+</section>
+
+
+</body>
+</html>

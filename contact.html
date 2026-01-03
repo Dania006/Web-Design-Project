@@ -1,0 +1,225 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+	<script>
+		function validateForm(){
+				  let validName = validateName();
+				  let validEmail = validateEmail();
+				  let validPhone = validatePhone();
+			  let validComment = validateComment();
+			  let validContact = validateContact();
+			  let validConditions = validateConditions();
+				  let validForm = false;
+				  if (validName && validEmail && validPhone && validComment && validContact && validConditions) {
+					  validForm = true;
+				  }
+				  return validForm;
+			  }
+  
+			  function validateName(){
+			  
+				  let nameElement = document.getElementById('name');
+				  let errorElement = document.getElementById('errorMsg');
+				  let validName;
+				  if (nameElement.value == "") {
+					  nameElement.style.border = "2px solid red";
+					  errorElement.innerHTML = "Please Enter Your Name";
+					  errorElement.style.color = "red";
+					  validName = false;
+  
+			  
+				  } else {
+					  nameElement.style.border = "";
+					  errorElement.innerHTML = "";
+					  errorElement.style.color = "black";
+					  validName = true;
+				  }
+				  return validName;
+			  }
+			  function validateEmail(){
+			  
+				  let nameElement = document.getElementById('email');
+				  let errorElement = document.getElementById('errorMsg2');
+				  let validEmail;
+				  if (nameElement.value == "") {
+					  nameElement.style.border = "2px solid red";
+					  errorElement.innerHTML = "Please Enter Your Email";
+					  errorElement.style.color = "red";
+					  validEmail = false;
+  
+			  
+				  } else {
+					  nameElement.style.border = "";
+					  errorElement.innerHTML = "";
+					  errorElement.style.color = "black";
+					  validEmail = true;
+				  }
+				  return validEmail;}
+  
+			  function validatePhone(){
+			  
+				  let nameElement = document.getElementById('phone');
+				  let errorElement = document.getElementById('errorMsg3');
+				  let validPhone;
+				  if (nameElement.value == "") {
+					  nameElement.style.border = "2px solid red";
+					  errorElement.innerHTML = "Please Enter Your Phone Number";
+					  errorElement.style.color = "red";
+					  validPhone = false;
+  
+			  
+				  } else {
+					  nameElement.style.border = "";
+					  errorElement.innerHTML = "";
+					  errorElement.style.color = "black";
+					  validPhone = true;
+				  }
+				  return validPhone;}
+  
+			  function validateComment(){
+			  
+				  let nameElement = document.getElementById('comment');
+				  let errorElement = document.getElementById('errorMsg4');
+				  let validPhone;
+				  if (nameElement.value == "") {
+					  nameElement.style.border = "2px solid red";
+					  errorElement.innerHTML = "Please Add a Comment";
+					  errorElement.style.color = "red";
+					  validComment = false;
+  
+			  
+				  } else {
+					  nameElement.style.border = "";
+					  errorElement.innerHTML = "";
+					  errorElement.style.color = "black";
+					  validComment = true;
+				  }
+				  return validComment;}
+  
+			  function validateContact(){
+				  let emailRadio = document.getElementById("email1");
+				  let phoneRadio = document.getElementById("phone1");
+				  let radioErrorElem = document.getElementById("radioErrorMsg");
+				  if (emailRadio.checked || phoneRadio.checked) {
+					  radioErrorElem.innerHTML = "";
+					  radioErrorElem.style.color = "black";
+					  return true;
+				  } else {
+					  radioErrorElem.innerHTML = "Please Select a Contact Method";
+					  radioErrorElem.style.color = "red";
+					  return false;
+				  }}
+  
+			  function validateConditions(){
+				  let conditionRadio = document.getElementById("conditions");
+				  let radioErrorElem = document.getElementById("checkErrorMsg");
+				  if (conditionRadio.checked) {
+					  radioErrorElem.innerHTML = "";
+					  radioErrorElem.style.color = "black";
+					  return true;
+				  } else {
+					  radioErrorElem.innerHTML = "Please Accept our Terms and Conditions";
+					  radioErrorElem.style.color = "red";
+					  return false;
+				  }}
+	   </script>
+</head>
+<body>
+    <header>
+        <img src="images/Brown Beige Cute Bakery Logo.png" id="logo"  />
+        <nav>
+           <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="subscribe.html">Subscribe</a></li>
+           </ul>
+        </nav>
+     </header>
+     <section>
+      <form action=" https://sit.udst.edu.qa/processform.php" onsubmit=" return validateForm();" method="POST">
+     <h1>Contact Us Today!</h1>
+     <h2>Visit Us At:</h2>
+
+     
+     <fieldset>
+
+      
+
+      <div>
+      <input type="text" id="name" placeholder="Name" onblur="validateName()" name="Name">
+      <span id="errorMsg"></span>
+   </div>
+
+   <div>
+      <input type="email" id="email" placeholder="Email" onblur="validateEmail()" name="Email">
+      <span id="errorMsg2"></span>
+   </div>
+
+   <div>
+      <input type="text" id="phone" placeholder="Phone Number" onblur="validatePhone()" name="Phone Number">
+      <span id="errorMsg3"></span>
+   </div>
+
+   <div>
+      <input type="text" name="comment" id="comment" placeholder="Add a comment!" onblur="validateComment()" itemid="Comment">
+      <span id="errorMsg4"></span>
+   </div>
+
+   <div>
+      <label for="method">Contact Via:</label>
+      <input type="radio" onclick="validateContact()" id="email1" name="Method"><label for="email1">Email</label><input type="radio" onclick="validateContact()" id="phone1" name="Method"><label for="phone1">Phone</label>
+      <span id="radioErrorMsg"></span>
+   </div>
+
+   <div>
+      <label for="conditions">Accept our terms and conditions:</label>
+      <input type="checkbox" onclick="validateConditions()" id="conditions" name="Conditions">
+      <span id="checkErrorMsg"></span>
+   </div>
+
+   <div>
+      <input type="submit" value="Submit" id="submit">
+   </div>
+
+
+     </fieldset>
+
+
+ <section>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14421.271128940778!2d51.481075!3d25.360664!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dcfb2722e9e9%3A0xd1b07d34e11ee6d5!2sUniversity%20of%20Doha%20for%20Science%20and%20Technology!5e0!3m2!1sen!2sqa!4v1732281476963!5m2!1sen!2sqa" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </section>
+
+   </form>
+  
+
+   </section>
+
+   <footer>
+    <div>
+       <h1>ORDER</h1>
+       <a href="products.html">Specials</a> <a href="products.html">Coffee's</a> <a href="products.html">Iced Drinks</a> <a href="products.html">Cookies</a> <a href="products.html">Brownies</a> <a href="products.html">Cakes</a> <a href="products.html">Other Pastries</a>
+    </div>
+    <div>
+       <h1>ABOUT US</h1>
+       <a href="index.html">Company Intro</a> <a href="index.html">Reviews</a> <a href="index.html">Top Sellers</a> <a href="index.html">Discounts</a>
+    </div>
+    <div>   
+       <h1>FORMS</h1>
+	   <a href="contact.html">Visit Us</a> <a href="contact.html">Contact Us</a> <a href="contact.html">Location</a>    </div>
+    <address>
+       <h1><b>VISIT US</b></h1>
+       <p>Doha Down Town <br />
+       719 Water Map <br />
+       Radio Beach, FL  69010 <br />
+       (000) 313 - 6753</p>
+    </address>
+ </footer>
+
+
+     
+</body>
+</html>

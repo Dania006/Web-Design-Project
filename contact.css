@@ -1,0 +1,141 @@
+html {
+   
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100%;
+ }
+ 
+ body {
+    background-color: white;
+    border-left: 1px solid rgb(120, 81, 45);
+    border-right: 1px solid rgb(120, 81, 45);
+    margin: 0px auto;
+    min-width: 800px;
+    max-width: 1200px;  
+    width: 100%;
+ }
+ 
+
+ 
+ header img#logo{
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    background: white;
+ }
+ 
+ header {
+    color: white;
+ }
+ 
+ 
+ header nav ul{
+    display:flex;
+    justify-content: center;
+    background: rgb(255, 231, 172);
+    border: none;
+    justify-content: space-evenly;
+    margin: auto;
+ }
+ 
+ header nav ul li {
+    font-size: 1.2em; 
+    padding: 15px 10px;
+    text-align: center;
+    list-style: none;
+    
+ }
+ 
+ header nav ul li a {
+    color: rgb(120, 81, 45);
+    text-decoration: none;
+    transition: 0.5s;
+ }
+ 
+ header nav ul li a:hover {
+   color: rgb(255, 255, 255);
+   background-color: rgb(174, 214, 191);
+   padding: 10px;
+   border-radius: 10px;
+}
+form{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows:20% 1fr;
+   padding-bottom: 80px;
+   padding-right: 30px;
+   background-color: rgb(255, 231, 172);
+   border: 25px solid rgb(174, 214, 191);
+   margin: auto;
+   
+}
+
+fieldset{
+   grid-column: 2/2;
+   grid-row: 2/3;
+   background-color: rgb(174, 214, 191);
+
+}
+
+
+
+div{
+   margin: 20px;
+   
+}
+h2{
+   grid-column: 1/1;
+   grid-row: 1/1;
+   padding-left: 45px;
+   color: rgb(120, 81, 45);
+}
+iframe{
+   padding-left: 40px;
+   border-radius: 10px;
+   height: 450px;
+}
+
+div #name,#phone,#email,#submit{
+   width: 500px;
+   padding: 10px;
+}
+
+div #comment{
+   width: 500px;
+   padding-bottom: 50px;
+
+}
+form h1{
+   grid-column: 2/2;
+   color: rgb(120, 81, 45);
+}
+
+footer {
+    color: rgb(130, 184, 170);    
+    background-color: rgb(255, 231, 172);   
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 20% 20% 30% 30%;
+    grid-column-gap: 15px;
+    
+ }
+ 
+ footer h1 {
+    color: rgb(120, 81, 45);   
+    font-size: 1em;
+    margin: 10px 0px;
+    margin-top: 0px;
+ }
+ 
+ footer a {
+    display: block;
+    color: rgb(130, 184, 170);
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 3px;
+    
+ }
+ address{
+    font-size: 0.9em;
+    padding-top: 20px;
+ }
