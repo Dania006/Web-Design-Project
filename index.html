@@ -5,6 +5,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: name,
+        price: price,
+        image: image
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.location.href = "cart.html";
+}
+</script>
+
 <body>
     
     <header>
@@ -55,33 +71,35 @@
         
             
         <div id="img1">
-            <img src="/Images/c160dfc3f9cc82cd4daab0c603268fc0.jpg" alt="">
+        
+            <img src="images/c160dfc3f9cc82cd4daab0c603268fc0.jpg" alt="">
+            
             <p>Oreo Vanilla Cake <br>150QR <br><b>120QR -20%</b></p>
             
         </div>
 
         <div id="img2">
-            <img src="/images/Strawberry Cheesecake Recipe.jpeg" alt="">
+            <img src="images/Strawberry Cheesecake Recipe.jpeg" alt="">
             <p>Strawberry Cheesecake <br>150QR <br><b>120QR -20%</b></p>
         </div>
 
         <div id="img3">
-            <img src="/Images/White Chocolate Brownies.jpeg" alt="">
+            <img src="images/White Chocolate Brownies.jpeg" alt="">
             <p>White Chocolate Brownies<br>50QR <br><b>40QR -20%</b></p>
         </div>
 
         <div id="img4">
-            <img src="/Images/THE BEST Bakery Style Chocolate Chip Cookies (with VIDEO) - Scientifically Sweet.jpeg" alt="">
+            <img src="images/THE BEST Bakery Style Chocolate Chip Cookies (with VIDEO) - Scientifically Sweet.jpeg" alt="">
             <p>Chocolate Chip Cookies<br>50QR <br><b>40QR -20%</b></p>
         </div>
 
         <div id="img5">
-            <img src="/Images/This Classic Tiramisu is a rich and creamy dessert….jpeg" alt="">
+            <img src="images/This Classic Tiramisu is a rich and creamy dessert.jpeg" alt="">
             <p>Tiramisu <br>100QR <br><b>80QR -20%</b></p>
         </div>
 
         <div id="img5">
-            <img src="/Images/Fried Nutella Pancake Sandwich Recipe - Bake with Shivesh.jpeg" alt="">
+            <img src="images/Fried Nutella Pancake Sandwich Recipe - Bake with Shivesh.jpeg" alt="">
             <p>Nutella Pancake<br>50QR <br><b>40QR -20%</b></p>
         </div>
         
