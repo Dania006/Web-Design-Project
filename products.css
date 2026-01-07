@@ -64,17 +64,21 @@ section#grid{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: rgb(174, 214, 191);
-    padding-top: 60px;
-    padding-left: 90px; 
+
 
  }
 
- section#grid div img{
+ section#grid img{
 
    display: block;
    margin: 0 auto;
-   padding-left: 104px;
+
  }
+
+ section div{
+      margin: 15px;
+ }
+
 
 
 #discription{
@@ -105,8 +109,8 @@ div img:hover{
     margin: auto;
     width: 190px;
     font-style:italic;
-    margin-right: 70px;
-    margin-bottom: 20px;
+    ;
+
     
  }
 
