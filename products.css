@@ -4,15 +4,12 @@ html {
     height: 100%;
  }
  
- body {
-    background-color: white;
-    border-left: 1px solid rgb(120, 81, 45);
-    border-right: 1px solid rgb(120, 81, 45);
-    margin: 0px auto;
-    min-width: 800px;
-    max-width: 1200px;  
-    width: 100%;
- }
+body {
+   background-color: white;
+   margin: 0;
+   width: 100%;
+   min-height: 100vh;
+}
  
  
  header img#logo{
@@ -68,10 +65,18 @@ section#grid{
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: rgb(174, 214, 191);
     padding-top: 60px;
-    padding-left: 90px;
-    
-    
+    padding-left: 90px; 
+
  }
+
+ section#grid div img{
+
+   display: block;
+   margin: 0 auto;
+   padding-left: 104px;
+ }
+
+
 #discription{
     font-size: 0.8em;
     font-style:inherit;
