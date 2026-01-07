@@ -8,13 +8,11 @@ html {
 
 body {
    background-color: white;
-   border-left: 1px solid rgb(120, 81, 45);
-   border-right: 1px solid rgb(120, 81, 45);
-   margin: 0px auto;
-   min-width: 800px;
-   max-width: 1200px;  
+   margin: 0;
    width: 100%;
+   min-height: 100vh;
 }
+
 
 
 header img#logo{
@@ -129,17 +127,27 @@ div img:hover{
 }
 section#grid{
    display: grid;
-   justify-content: left;
-   align-items: left;
    padding: 20px;
-   padding-right: 8px;
+
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
    background-color: rgb(174, 214, 191);
 }
 
 
- 
+section#grid div img {
+
+   display: block;
+   margin: 0 auto;
+}
+
+section#grid div p {
+padding: 10px;
+}
+
+
+
+
 section#gridouter {
    background-color:rgb(255, 231, 172);
    padding-top: 20px;
