@@ -58,14 +58,17 @@ body {
 form{
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows:20% 1fr;
+   grid-template-rows: 20% 1fr;
    padding-bottom: 80px;
    padding-right: 30px;
    background-color: rgb(255, 231, 172);
    border: 25px solid rgb(174, 214, 191);
    margin: auto;
+
    
 }
+
+
 
 fieldset{
    grid-column: 2/2;
@@ -90,6 +93,7 @@ iframe{
    padding-left: 40px;
    border-radius: 10px;
    height: 450px;
+   width: 830px;
 }
 
 div #name,#phone,#email,#submit{
